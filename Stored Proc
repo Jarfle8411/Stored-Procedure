@@ -1,0 +1,18 @@
+-- CREATE A STORED PROCEDURE 
+
+CREATE PROCEDURE pr_MyProcedure
+AS
+BEGIN
+SELECT firstName 
+FROM FAddressess 
+WHERE lastName = 'Freeman'
+SELECT birthDay, firstName, CellNumber 
+FROM dbo.Friends
+WHERE birthDay = '1980-08-06'
+END; 
+GO
+
+-- EXECUTE THE PROCEDURE 
+
+EXECUTE pr_MyProcedure
+GO
